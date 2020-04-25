@@ -13,10 +13,20 @@ $(function(){
         if($("#et_pb_contact_form_0").has(".et-pb-contact-message")){
             $("strong:contains('Get In Touch')").text("Thanks For Your Contact");
         }
-        else{
-
-        }
     });
+    var navheight=$("#main-header").height();
+    $(window).scroll(function(){
+        if($("#main-header").height()!==navheight){
+        $("#mobile_menu").css({
+            top:$("#main-header").height()-"25"
+    })  }
+            if( $(window).scrollTop()==0 ){
+                $("#mobile_menu").css({
+                    top:$("#main-header").height()-"16"
+            })  
+            }
 
+       }); 
     
-  });
+
+});
